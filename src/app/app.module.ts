@@ -10,10 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
 import { FormsModule } from '@angular/forms';
 import { CoursesService } from './shared/services/courses.service';
+import { LessonsService } from './shared/services/lessons.service';
 
 @NgModule({
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -23,10 +24,11 @@ import { CoursesService } from './shared/services/courses.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    CoursesComponent
+    CoursesComponent,
   ],
   providers: [
-    CoursesService
+    CoursesService,
+    LessonsService
   ],
   bootstrap: [AppComponent]
 })

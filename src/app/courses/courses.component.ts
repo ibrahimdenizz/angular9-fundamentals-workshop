@@ -19,7 +19,8 @@ export class CoursesComponent implements OnInit {
 
   ngOnInit(): void {
     this.resetSelectedCourse();
-    this.courses = this.coursesService.all();
+    this.courses = this.coursesService.all()
+    .subscribe(courses => this.courses = courses);
   }
 
   resetSelectedCourse() {
