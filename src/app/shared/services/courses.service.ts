@@ -40,11 +40,11 @@ export class CoursesService {
   }
 
   update(course) {
-    console.log('UDDATE COURSE', course);
+    return this.http.put(`${this.getUrl()}/${course.id}`,course)
   }
 
   delete(courseId) {
-    console.log('DLETE COURSE', courseId);
+    return this.http.delete(`${this.getUrl()}/${courseId}`)
   }
 
   private getUrl() {
